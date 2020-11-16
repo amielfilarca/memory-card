@@ -144,8 +144,14 @@ const IndexPage = () => {
                   initial={{ scale: 0, opacity: 0 }}
                   animate={{ scale: 1, opacity: 1 }}
                   transition={{ delay: (options.indexOf(card) / 1) * 0.1 }}
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
+                  whileHover={{
+                    scale: 1.1,
+                    transition: { delay: 0, duration: 0.1 },
+                  }}
+                  whileTap={{
+                    scale: 0.9,
+                    transition: { delay: 0, duration: 0.1 },
+                  }}
                   onClick={() => cardClickHandler(card.id)}
                   key={card.id}
                 >
