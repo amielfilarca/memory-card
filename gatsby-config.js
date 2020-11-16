@@ -2,7 +2,7 @@ module.exports = {
   pathPrefix: "/memory-card",
   siteMetadata: {
     title: `Memory Card`,
-    description: `This application puts your memory to the test. You are presented with multiple artifact cards. The cards get shuffled every time they are clicked. You CAN NOT click on any card more than once or else your score resets to zero. The main objective is to get the highest score as possible.`,
+    description: `This application puts your memory to the test. You are presented with multiple artifact cards. The cards get shuffled every time they are clicked. You CAN NOT click on any card more than once or else your score resets to zero. The main objective is to get the highest possible score.`,
     author: `Amiel Filarca`,
   },
   plugins: [

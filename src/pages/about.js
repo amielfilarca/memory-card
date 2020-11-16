@@ -26,7 +26,7 @@ const AboutPage = () => (
           multiple artifact cards. The cards get shuffled every time they are
           clicked. You <strong>CAN NOT</strong> click on any card more than once
           or else your score resets to zero. The main objective is to get the
-          highest score as possible.
+          highest possible score.
         </p>
         <h1 className={styles.h1}>Credits</h1>
         <p className={styles.p}>
