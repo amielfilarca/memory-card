@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import BackgroundImage from "gatsby-background-image"
 
 import Header from "./header"
 import "./layout.css"
@@ -20,29 +21,30 @@ const Layout = ({ children }) => {
           title
         }
       }
+      bg: file(relativePath: { eq: "bg.jpg" }) {
+        childImageSharp {
+          fluid(maxWidth: 1440, quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
     }
   `)
 
+  const imageData = data.bg.childImageSharp.fluid
+
   return (
-    <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+    <BackgroundImage
+      className="bgImage"
+      fluid={imageData}
+      backgroundColor={`#040e18`}
+    >
+      <div className="container">
+        <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
         <main>{children}</main>
-        <footer style={{
-          marginTop: `2rem`
-        }}>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <footer>&copy; 2020 Amiel Filarca</footer>
       </div>
-    </>
+    </BackgroundImage>
   )
 }
 
