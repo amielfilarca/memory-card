@@ -23,7 +23,7 @@ const AboutPage = () => (
         <h1 className={styles.h1}>How to Play</h1>
         <p className={styles.p}>
           This application puts your memory to the test. You are presented with
-          multiple artifact cards. The cards get shuffled everytime they are
+          multiple artifact cards. The cards get shuffled every time they are
           clicked. You <strong>CAN NOT</strong> click on any card more than once
           or else your score resets to zero. The main objective is to get the
           highest score as possible.
